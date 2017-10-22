@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>3K00d1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        var bankObjects = {};
+    </script>
+    <script src="lib/lodash.js"></script>
+    <script src="model/bank.js"></script>
+    <script src="model/customer.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
 </head>
-<body>
-<h3>TODO...</h3>
+<body class="mdc-typography">
+
+
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+            <p class="mdc-typography--title">Banks</p>
+            <ul id="bankList" class="mdc-list mdc-list--two-line">
+            </ul>
+        </div>
+        <div class="mdc-layout-grid__cell">
+            <p class="mdc-typography--title">Customers</p>
+            <ul id="customerList" class="mdc-list mdc-list--two-line">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    bankObjects.ui.createBankList();
+</script>
 </body>
 </html>
